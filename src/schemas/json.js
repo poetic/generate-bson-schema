@@ -6,7 +6,7 @@ function typeForJsonSchema (value) {
 
   if (type === 'date') {
     return 'string';
-  } else if (type === null) {
+  } else if (type === 'null') {
     return 'string';
   }
 
