@@ -1,3 +1,4 @@
+// NOTE: json is just a subset of bson, so we can just wrap bson here
 // Modules
 var Type = require('type-of-is')
 
