@@ -187,15 +187,10 @@ function processArray (array, output, nested) {
     for (var index = 0, length = array.length; index < length; index++) {
       var value = array[index]
       var itemType = typeOf(value)
-      var required = []
       var processOutput
 
       switch (itemType) {
         case "object":
-          if (output.items.properties) {
-            output.items.required = getUniqueKeys(output.items.properties, value, output.items.required)
-          }
-
           processOutput = processObject(value, oneOf ? {} : output.items.properties, true)
           break
 
