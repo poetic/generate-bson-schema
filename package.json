@@ -1,6 +1,6 @@
 {
   "name": "generate-schema",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "author": "Nijiko Yonskai <nijikokun@gmail.com>",
   "description": "Effortlessly convert your JSON Object to JSON Schema, Mongoose Schema, or a Generic template for quick documentation / upstart.",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "validation"
   ],
   "dependencies": {
-    "bson-type-of-is": "1.2.0",
+    "bson-type-of-is": "^1.3.0",
     "type-of-is": "^3.4.0"
   },
   "devDependencies": {
