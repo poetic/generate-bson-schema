@@ -4,33 +4,6 @@ var bsonTypeOfIs = require('bson-type-of-is')
 // Constants
 var DRAFT = "http://json-schema.org/draft-04/schema#"
 
-function getUniqueKeys (a, b, c) {
-  var a = Object.keys(a)
-  var b = Object.keys(b)
-  var c = c || []
-  var value
-  var cIndex
-  var aIndex
-
-  for (var keyIndex = 0, keyLength = b.length; keyIndex < keyLength; keyIndex++) {
-    value = b[keyIndex]
-    aIndex = a.indexOf(value)
-    cIndex = c.indexOf(value)
-
-    if (aIndex === -1) {
-      if (cIndex !== -1) {
-        // Value is optional, it doesn't exist in A but exists in B(n)
-        c.splice(cIndex, 1)
-      }
-    } else if (cIndex === -1) {
-      // Value is required, it exists in both B and A, and is not yet present in C
-      c.push(value)
-    }
-  }
-
-  return c
-}
-
 function processArray (array, output, nested) {
   var oneOf
   var type
